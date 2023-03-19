@@ -1,0 +1,97 @@
+if (map[user_x, user_y] == 'o')
+                {
+                    Console.Clear();
+                    Console.WriteLine("Вы слышите женское хихиканье в темноте, и вас это очень завораживает и возбуждает и вы хотите пойти туда");
+                    Console.Write($"Пойдем туда?   \n 1.ДА \n 2.НЕТ");
+                    string solving;
+                    Console.Write("Решение: ");
+                    solving = Console.ReadLine();
+
+                    if (solving == "1")
+                    {
+                        Console.WriteLine("Вы настолько возбуждены, что на миг забыли,а вдруг это ловушка" + "Призовете ли мать в случае нападения? \n1.ДА\n2.НЕТ ");
+                        string solving2;
+                        solving2 = Console.ReadLine();
+                        if (solving2 == "1")
+                        {
+                            Console.WriteLine("Вы решили перебороть свои девстенные шалости и сыграть умом, призвав мать");
+                            Console.WriteLine("Вы идете вдоль темной комнаты, женское хихиканье становится все ближе и ближе\nВы решаетесь спросить: 1:ЭЙ ТЯНКА, ПОМУРЧИ В ДИСКОРДИКЕ, Я НА СФЕ ТАЙМЛЮ ЕУЛ ПОД УЛЬТ+\t+2:Кто здесь? Помагити");
+                            string solving3;
+                            solving3 = Console.ReadLine();
+                            if (solving3 == "1")
+                            {
+                                Console.WriteLine("Из темноты прекращается хихиканье, но сменяется плачем\nВы в неудоумении(неужели я бездарный?)\nВы все таки решаетесь продолжить идти, мать с вами(пока)\nПриблизившись вы видите топ тянку 14.1, но плачущую.\nУвидев вас, она снова рассмеялась и превратилась в поебень...\nВы испугались, но так как с вами призванная мать, она вас зашитит");
+                                Console.WriteLine("ДРАКА БЛЯТЬ, ну ты и токсик ");
+                            }
+                            
+                            static void Main(string[] args)
+        {
+            Random rand = new Random();
+            float hp_hero = 400;
+            float hp_enemy = 500;
+            float armor_enemy = 50, armor_hero = 35;
+            int dmg_hero = rand.Next(35, 65);
+            int dmg_enemy = rand.Next(25, 70);
+            float health = 1;
+            int damage = 1;
+            float armor = 0;
+
+
+            while (hp_hero > 0 && hp_enemy > 0)
+            {
+                //hp_enemy -=Convert.ToSingle(rand.Next(0, dmg_hero + 1)) / 100 * armor_enemy;
+                int kubik_hero, kubik_enemy;
+                kubik_hero = rand.Next(1, 7);
+                Console.WriteLine($"Выпало {kubik_hero} очков множителя урона");
+                Console.ReadKey();
+                hp_enemy -= Convert.ToSingle(kubik_hero) * dmg_hero / 100 * armor_enemy;
+                Console.WriteLine($"Вы нанесли {(dmg_hero * kubik_hero) / 100 * armor_enemy} урона\nЗдоровье врага{hp_enemy}");
+                kubik_enemy = rand.Next(1, 7);
+                
+                hp_hero -= Convert.ToSingle(kubik_enemy) * dmg_enemy / 100 * armor_hero;
+                if (hp_hero < 0)
+                {
+                    Console.WriteLine($"Мать кринжанула и сдохла(снова), теперь вы один на один с этой тварью, но вы настолько преисполнены, что мать как будто вселяется в вас и вы превращаетесь в сфа с{health} единиц здоровья и {damage + 100} \nВремя поднять в еул эту сучку и убить\nСколько таймится еул, чтобы въебать ей ультой?\n1.5 секунды\n2 секунды\n2.5 секунды ");
+                    string solving4;
+                    Console.Write("ВВеди как указано в описании с .");
+                    solving4 = Console.ReadLine();
+                    if (solving4 == "1.5")
+                    {
+                        Console.WriteLine("Ты ебаный бот и не затаймил, ты сдох, лох");
+
+                    }
+                    else if (solving4 == "2")
+                    {
+                        Console.WriteLine("Ты ебаный бот и не затаймил, ты сдох, лох");
+
+                    }
+                    else if (solving4 == "2.5")
+                    {
+                        Console.WriteLine("Ахуеть, ты затаймил поеботу и у тебя в голове заиграла музыка шадоурейза и у тя хуй встал на себя же, ты победил");
+                        hp_enemy = 0;
+                        hp_hero = 1;
+
+                    }
+                }
+                Console.WriteLine($"Вам нанесли{(kubik_enemy * dmg_enemy) / 100 * armor_hero}\nВаше здоровье{hp_hero}");
+
+                Console.WriteLine("ZDOROVIE GEROYA " + hp_hero + "\t" + "ZDOROVIE VRAGA " + hp_enemy);
+            }
+            if (hp_enemy <= 0)
+            {
+                Console.WriteLine("Вау, неожиданно из той ведьмы вылетела какая то фигня и она снова превратилась в топ тянку, и говорит хотишь я тиби помурчу в дискордике дай мне свой дискордик МЯЯУ МЯЯЯЯУ, ты вахуе с этого от счастья или чёйта\nУбить нахуй\nПощадить и может стать счастливым");
+                string solving5;
+                Console.Write("Решение Убить\\Пощадить:");
+                solving5 = Console.ReadLine();
+                if (solving5 == "Убить")
+                {
+                    Console.WriteLine("ты убиваешь посудомойку и возможно это даже к лучшему");
+                    Console.WriteLine("Концовка: ТЯН НЕ НУЖНЫ");
+                }
+                if (solving5 == "Пощадить")
+                {
+                    Console.WriteLine("ТЫ решаешь пощадить эту бабу и вы решаете выбраться из этого места, что вам и удается, в конечном итоге ты лишился девственности, но она настолько ебнутая, что хотела тебя снова убить и вы расстались");
+                    Console.WriteLine("Концовка: ДЕВСТЕННИК");
+                }
+            }
+        }
