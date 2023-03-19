@@ -1,0 +1,8 @@
+ int hp_hero = 100, dmg_hero = 50, armor_hero = 50;
+                                int hp_enemy = 200, dmg_enemy = 35, armor_enemy = 25;
+                                Random rand= new Random();
+                                while(hp_hero>0 &&hp_enemy>0)
+                                {
+                                    hp_hero-=rand.Next(dmg_enemy)/100*armor_hero;
+                                    hp_enemy-=rand.Next(dmg_hero)/100*armor_enemy;
+                                }
