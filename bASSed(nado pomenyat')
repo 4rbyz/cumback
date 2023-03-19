@@ -1,0 +1,24 @@
+string nameOfPlayer;
+            int health, damage, armor;
+            string Class;
+            Console.WriteLine("Добро пожаловать в подземелье, как тебя называть, герой?");
+            Console.Write("Ваше имя: ");
+            nameOfPlayer = Console.ReadLine();
+            Console.WriteLine($"Здравствуй, {nameOfPlayer}, какая у тебя сила?");
+            Console.WriteLine("Выбери свой класс из списка: ебучий дединсайд(ед) hp=1,dmg=1,armor=0 Особенность:призывает мать из могилы, если встанет на колени hp=100,dmg=50,armor=50");
+            Console.WriteLine("Выбери свой класс из списка: азазин(азаз) hp=50,dmg=25,armor=30 Особенность: курит шмаль и прибавляет 60hp и 20dmg");
+            Console.WriteLine("Выбери свой класс из списка: z-воин(z) hp=100,dmg=50,armor=50 Особенность: настолько шизик, что при упоминании об укропах, лупит себя по голове и отнимает себе 10hp");
+            Class = Console.ReadLine();
+            /*  switch (Class)
+              {
+                  case "ед":
+                      Console.WriteLine("Вы выбрали ебучего дединсайда");
+                      break;
+                       case "азаз":
+                      Console.WriteLine("Вы выбрали азазина");
+                      break;
+                       case "z":
+                      Console.WriteLine("Вы выбрали z-воина ");
+                      break;
+
+             }
