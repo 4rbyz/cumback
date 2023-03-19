@@ -1,1 +1,47 @@
-
+static void Movement(char[,] map)
+        {
+            Console.CursorVisible = false;
+            int user_x = 8, user_y = 8;
+            int keyIsFound = 0;
+            while (true)
+            {
+                Console.SetCursorPosition(0, 0);
+                for (int i = 0; i < map.GetLength(0); i++)
+                {
+                    for (int j = 0; j < map.GetLength(1); j++)
+                    {
+                        Console.Write(map[i, j]);
+                    }
+                    Console.WriteLine();
+                }
+                Console.SetCursorPosition(user_y, user_x);
+                Console.Write("ты");
+                ConsoleKeyInfo key = Console.ReadKey();
+                switch (key.Key)
+                {
+                    case ConsoleKey.UpArrow:
+                        if (map[user_x - 1, user_y] != '#')
+                        {
+                            user_x--;
+                        }
+                        break;
+                    case ConsoleKey.DownArrow:
+                        if (map[user_x + 1, user_y] != '#')
+                        {
+                            user_x++;
+                        }
+                        break;
+                    case ConsoleKey.LeftArrow:
+                        if (map[user_x, user_y - 1] != '#')
+                        {
+                            user_y--;
+                        }
+                        break;
+                    case ConsoleKey.RightArrow:
+                        if (map[user_x, user_y + 1] != '#')
+                        {
+                            user_y++;
+                        }
+                        break;
+                }
+                Console.Clear();
