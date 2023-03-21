@@ -1,0 +1,17 @@
+List<string> chest = new List<string>();
+List<string> inventory = new List<string>();
+case ConsoleKey.I:
+                   
+                        chest.Add("Ключ");
+                        chest.Add("Загадака");
+                        chest.Add("penis");
+         
+                        inventory = chest.ToList();
+                        Console.SetCursorPosition(25, 0);
+                        Console.Write("Инвентарь: ");
+                        for (int i = 0; i < inventory.Count; i++)
+                        {
+                            Console.Write(inventory[i] + " ");
+                        }
+                        Console.ReadKey();
+                        break;
