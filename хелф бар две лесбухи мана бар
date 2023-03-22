@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.Design;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+public class IditeNahyi
+{
+    static void Main(string[] args)
+    {
+        int health=5, maxHealth=10;
+        RisuemBar(health, maxHealth,ConsoleColor.Green,0);
+        int mana = 5, maxMana = 10;
+        RisuemBar(mana, maxMana, ConsoleColor.Blue, 1);
+    }
+    static void RisuemBar(int value, int MaxValue, ConsoleColor color,int position)
+    {
+        ConsoleColor defaultColor = Console.BackgroundColor;
+        string bar = "";
+        for (int i = 0; i < value; i++)
+        {
+            bar += " ";
+        }
+        Console.SetCursorPosition(0, position);
+        Console.Write('[');
+        Console.BackgroundColor = color;
+        Console.Write(bar);
+        Console.BackgroundColor = defaultColor;
+
+        bar = "";
+        for (int i = value; i < MaxValue; i++)
+        {
+            bar += " ";
+        }
+        Console.Write(bar+']');
+    }
+}
