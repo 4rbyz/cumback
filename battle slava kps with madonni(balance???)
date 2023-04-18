@@ -6,3 +6,50 @@
                                     hp_hero-=rand.Next(dmg_enemy)/100*armor_hero;
                                     hp_enemy-=rand.Next(dmg_hero)/100*armor_enemy;
                                 }
+                                
+                                
+                                UPDATE
+static void Main(string[] args)
+        {
+            HeroPlaya hero = new HeroPlaya(100, 5, "pidarok", 10);
+            EnemyBot bot = new EnemyBot(50, 4, "Mahentohen", 5);
+            hero.TakeDamage(500);
+            bot.TakeDamage(100);
+            Console.WriteLine("We:");
+            hero.ShowInfo();
+            Console.WriteLine("bot:");
+            bot.ShowInfo();
+        }
+        class Warrior
+        {
+            public int Health;
+            public int Damage;
+            public string Name;
+            public int Armor;
+            public Warrior(int health, int damage, string name, int armor)
+            {
+                Health = health;
+                Damage = damage;
+                Name = name;
+                Armor = armor;
+            }
+            public void TakeDamage(int damage)
+            {
+                Health -= damage - Armor;
+            }
+            public void ShowInfo()
+            {
+                Console.WriteLine(Health);
+            }
+            
+
+        }
+        class HeroPlaya : Warrior
+        {
+            public HeroPlaya(int health, int damage, string name, int armor) : base(health, damage, name, armor) { }
+        }
+        class EnemyBot : Warrior
+        {
+            public EnemyBot(int health, int damage, string name, int armor) : base(health, damage, name, armor) { }
+        }
+    }
